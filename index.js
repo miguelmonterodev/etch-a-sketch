@@ -18,5 +18,15 @@ function createGrid() {
     }
     
 }
-// Test
+
+// Create grid with a width according to user input
 createGrid()
+
+// Add event listener setting a hover effect when mouse is over a box
+for (let i=0; i<document.querySelectorAll('.box').length; i++) {
+    document.querySelectorAll('.box')[i].addEventListener("mouseover", function() {
+        document.querySelectorAll('.box')[i].style.backgroundColor = "blue"
+    })
+}
+
+
