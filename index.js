@@ -11,13 +11,12 @@ function createBox(width) {
 // Prompt the user the size of the grid and create the square grid
 function createGrid() {
     const gridSize = prompt("What's the size of the grid? Enter a number (example: 16")
-     
+    let width = window.innerWidth / parseInt(gridSize)
     for(let i=0; i<parseInt(gridSize)**2; i++) {
         createBox()
-        document.querySelectorAll('.box')[i].style.width = "20px"  // Add width to the boxes
+        document.querySelectorAll('.box')[i].style.width = width.toString() + "px"  // Add width to the boxes in pixels
     }
     
 }
 // Test
 createGrid()
-console.log(typeof(window.innerWidth))
