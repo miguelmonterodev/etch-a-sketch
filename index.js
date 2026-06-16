@@ -19,14 +19,21 @@ function createGrid() {
     
 }
 
+// Get random color
+function randomColor() {
+    let red = Math.floor(Math.random() * 256)
+    let green = Math.floor(Math.random() * 256)
+    let blue = Math.floor(Math.random() * 256)
+    return `rgb(${red},${green},${blue})`
+}
+
 // Create grid with a width according to user input
 createGrid()
 
 // Add event listener setting a hover effect when mouse is over a box
 for (let i=0; i<document.querySelectorAll('.box').length; i++) {
     document.querySelectorAll('.box')[i].addEventListener("mouseover", function() {
-        document.querySelectorAll('.box')[i].style.backgroundColor = "blue"
+        document.querySelectorAll('.box')[i].style.backgroundColor = randomColor()
+
     })
 }
-
-
